@@ -487,9 +487,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chunkPrefab: {fileID: 1153238911964338413, guid: c9cbd299ea523fe43aa7c7040f70e9d1, type: 3}
-  startingChunkAmount: 12
+  startingChunkAmount: 10
   chunkParent: {fileID: 988698612}
-  chunkLenght: 30
+  chunkLenght: 10
   moveSpeed: 8
 --- !u!4 &1176006543
 Transform:
