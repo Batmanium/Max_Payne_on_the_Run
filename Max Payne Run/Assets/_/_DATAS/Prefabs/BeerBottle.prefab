@@ -150,8 +150,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6047116490386263174}
-  - component: {fileID: -2920694058983086511}
   - component: {fileID: 500083631379870489}
+  - component: {fileID: -1940522990959739862}
   m_Layer: 0
   m_Name: BeerBottle
   m_TagString: Untagged
@@ -175,18 +175,6 @@ Transform:
   - {fileID: 330987410059470529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2920694058983086511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7163209187650056869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd46842485ee59444adcb5830aba2b4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &500083631379870489
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -210,3 +198,15 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!114 &-1940522990959739862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7163209187650056869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffbd2da0e6c6f1d4980af2b7d3fe7287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

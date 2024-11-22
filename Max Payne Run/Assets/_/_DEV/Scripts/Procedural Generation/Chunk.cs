@@ -6,11 +6,11 @@ public class Chunk : MonoBehaviour
 {
     [SerializeField] GameObject fencePrefab;
     [SerializeField] GameObject bottlePrefab;
-    [SerializeField] GameObject painKillerPrefab;
+    [SerializeField] GameObject pillsPrefab;
 
     [SerializeField] float bottleSpawnChance = .3f;
-    [SerializeField] float painKillerSpawnChance = .5f;
-    [SerializeField] float painKillerSeparationLenght = 2f;
+    [SerializeField] float pillsSpawnChance = .5f;
+    [SerializeField] float pillsSeparationLenght = 2f;
 
     [SerializeField] float[] lanes = { -2.5f, 0f, 2.5f };
 
@@ -19,7 +19,7 @@ public class Chunk : MonoBehaviour
     {
         SpawnFences();
         SpawnBottle();
-        SpawnPainKiller();
+        SpawnPills();
     }
 
     void SpawnFences()
@@ -47,22 +47,22 @@ public class Chunk : MonoBehaviour
          Instantiate(bottlePrefab, spawnPosition, Quaternion.identity, this.transform);
     }    
     
-    void SpawnPainKiller()
+    void SpawnPills()
     {
-        if (Random.value > painKillerSpawnChance || availableLanes.Count <= 0) return;
+        if (Random.value > pillsSpawnChance || availableLanes.Count <= 0) return;
         
         int selectedLane = SelectLane();
 
-        int maxPainKillerstoSpawn = 6;
-        int painKillersToSpawn = Random.Range(1, maxPainKillerstoSpawn);
+        int maxPillstoSpawn = 6;
+        int pillsToSpawn = Random.Range(1, maxPillstoSpawn);
 
-        float topOfChunkZPos = transform.position.z + (painKillerSeparationLenght * 2f);
+        float topOfChunkZPos = transform.position.z + (pillsSeparationLenght * 2f);
 
-        for (int i = 0; i < painKillersToSpawn; i++)
+        for (int i = 0; i < pillsToSpawn; i++)
         {
-            float spawnPositionZ = topOfChunkZPos - (i * painKillerSeparationLenght);
+            float spawnPositionZ = topOfChunkZPos - (i * pillsSeparationLenght);
             Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, spawnPositionZ);
-            Instantiate(painKillerPrefab, spawnPosition, Quaternion.identity, this.transform);
+            Instantiate(pillsPrefab, spawnPosition, Quaternion.identity, this.transform);
         }
 
 

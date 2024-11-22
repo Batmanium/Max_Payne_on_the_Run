@@ -755,6 +755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7053970d2f9590549ba775e580b9bbec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1184996378}
+  collisionCoolDown: 1
 --- !u!1 &2095196739
 GameObject:
   m_ObjectHideFlags: 0
