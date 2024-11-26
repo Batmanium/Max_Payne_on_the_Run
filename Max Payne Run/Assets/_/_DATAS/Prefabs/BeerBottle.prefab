@@ -194,7 +194,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.45
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 1.25, z: 0}
@@ -210,3 +210,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbd2da0e6c6f1d4980af2b7d3fe7287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  adjustChangeMoveSpeedAmount: 3

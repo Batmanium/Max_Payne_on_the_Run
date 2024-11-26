@@ -6,9 +6,9 @@ public class Bottle : Pickup
 
     LevelGenerator levelGenerator;
 
-    private void Start()
+    public void Init(LevelGenerator levelGenerator)
     {
-        levelGenerator = FindFirstObjectByType<LevelGenerator>();
+        this.levelGenerator = levelGenerator;
     }
 
     protected override void OnPickup()

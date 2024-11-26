@@ -14,12 +14,21 @@ public class Chunk : MonoBehaviour
 
     [SerializeField] float[] lanes = { -2.5f, 0f, 2.5f };
 
+    LevelGenerator levelGenerator;
+    ScoreManager scoreManager;
+
      List<int> availableLanes = new List<int>() { 0, 1, 2 };
     private void Start()
     {
         SpawnFences();
         SpawnBottle();
         SpawnPills();
+    }
+
+    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager)
+    {
+        this.levelGenerator = levelGenerator;
+        this.scoreManager = scoreManager;
     }
 
     void SpawnFences()
@@ -44,7 +53,8 @@ public class Chunk : MonoBehaviour
         int selectedLane = SelectLane();
 
          Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, transform.position.z);
-         Instantiate(bottlePrefab, spawnPosition, Quaternion.identity, this.transform);
+         Bottle newBottle = Instantiate(bottlePrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Bottle>();
+         newBottle.Init(levelGenerator);
     }    
     
     void SpawnPills()
@@ -62,7 +72,8 @@ public class Chunk : MonoBehaviour
         {
             float spawnPositionZ = topOfChunkZPos - (i * pillsSeparationLenght);
             Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, spawnPositionZ);
-            Instantiate(pillsPrefab, spawnPosition, Quaternion.identity, this.transform);
+            Pills newPills = Instantiate(pillsPrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Pills>();
+            newPills.Init(scoreManager);
         }
 
 
