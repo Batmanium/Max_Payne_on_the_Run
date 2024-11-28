@@ -161,6 +161,7 @@ MonoBehaviour:
   collisionParticleSysteme: {fileID: 8750602848826254907}
   boulderSmashAudio: {fileID: 9000368369163932511}
   shakeModifier: 10
+  collisionCooldown: 1
 --- !u!65 &2017659757042207115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -243,7 +244,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: b025affaac4800d46a478597f6621056, type: 3}
   m_Resource: {fileID: 8300000, guid: b025affaac4800d46a478597f6621056, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

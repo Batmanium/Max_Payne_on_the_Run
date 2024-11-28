@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Pills : Pickup
 {
-    [SerializeField] int scoreAmount = 100;
-    [SerializeField] AudioSource pillFX;
+    [SerializeField] int scoreAmount = 100;    
 
     const string playerString = "Player";
 
@@ -17,10 +16,9 @@ public class Pills : Pickup
     {
         if (other.CompareTag(playerString))
         {
-            OnPickup();
+            OnPickup();            
             Destroy(gameObject);
-            GetComponent<AudioSource>().Play();
-        }
+        } 
     }
 
     protected override void OnPickup()
