@@ -24,5 +24,6 @@ public class Pills : Pickup
     protected override void OnPickup()
     {
         scoreManager.IncreaseScore(scoreAmount);
+        PlaySound();
     }
 }

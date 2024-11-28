@@ -6014,7 +6014,7 @@ MonoBehaviour:
   playerController: {fileID: 1184996380}
   timeText: {fileID: 839682862}
   gameOverText: {fileID: 2053291504}
-  startTime: 20
+  startTime: 30
 --- !u!1 &1166057773
 GameObject:
   m_ObjectHideFlags: 0
@@ -10889,7 +10889,7 @@ MonoBehaviour:
   chunkParent: {fileID: 988698612}
   scoreManager: {fileID: 1160817450}
   startingChunkAmount: 10
-  checkpointChunkInterval: 10
+  checkpointChunkInterval: 12
   chunkLength: 10
   moveSpeed: 8
   minMoveSpeed: 2

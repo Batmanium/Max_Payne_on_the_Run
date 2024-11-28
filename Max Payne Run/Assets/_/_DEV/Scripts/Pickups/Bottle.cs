@@ -26,5 +26,6 @@ public class Bottle : Pickup
     protected override void OnPickup()
     {
         levelGenerator.ChangeChunkMoveSpeed(adjustChangeMoveSpeedAmount);
+        PlaySound();
     }
 }

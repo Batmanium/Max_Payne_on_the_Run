@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,5 +49,14 @@ public class GameManager : MonoBehaviour
         playerController.enabled = false;
         gameOverText.SetActive(true);
         Time.timeScale = .1f;
+
+        StartCoroutine(nameof(LoadMenuWithDelay));
+    }
+
+    private IEnumerator LoadMenuWithDelay()
+    {
+        yield return new WaitForSeconds(5 * Time.timeScale);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 }
