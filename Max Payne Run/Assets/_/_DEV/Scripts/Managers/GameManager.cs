@@ -53,10 +53,15 @@ public class GameManager : MonoBehaviour
         StartCoroutine(nameof(LoadMenuWithDelay));
     }
 
+    
+    
+    
+    
     private IEnumerator LoadMenuWithDelay()
     {
         yield return new WaitForSeconds(5 * Time.timeScale);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
+        //SceneManager.LoadScene(0);
     }
 }
